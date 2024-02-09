@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YASSIN</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <!-- Navigation Bar -->
+      <nav id="navigation-bar">
+        <a id="logo" href="index.html">yassinDoesDev</a>
+        <a class="nav-btns" href="#about-section">About</a>
+        <a class="nav-btns" href="#projects-section">Projects</a>
+        <a class="nav-btns" href="#contact-section">Contact</a>
+      </nav>
+      <!-- Header Title -->
+      <h1 id="header-title"><span>Who</span> am I?</h1>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about-section">
+      <div id="grid-item1">
+        <picture id="about-img-wrapper"
+          ><img id="about-img" src="images/pfpp.png" alt=""
+        /></picture>
+        <h1 id="about-header">
+          <span>&lt;Front-end Web Developer&gt;</span> and UI Designer.
+        </h1>
+        <p id="about-paragraph">
+          I am a front-end web developer with a strong foundation in Computer
+          Science, specializing in crafting engaging, user-friendly websites and
+          applications. My toolkit includes HTML, CSS, JavaScript, and
+          frameworks like React and Angular, enabling me to deliver visually
+          appealing and intuitive digital experiences. I thrive on solving
+          creative challenges and am committed to continuous learning to stay at
+          the forefront of web design trends. Passionate about merging
+          aesthetics with functionality, I aim to produce high-quality work that
+          adheres to best practices and industry standards. Eager for new
+          challenges, I seek opportunities to expand my skills and make a
+          meaningful impact in the tech world.
+        </p>
+        <div id="socials-container">
+          <a href="https://github.com/yasso2weny">
+            <picture
+              ><img class="socials-icon" src="images/github.png" alt=""
+            /></picture>
+          </a>
+          <a href="github.com">
+            <picture
+              ><img class="socials-icon" src="images/upwork-1.svg" alt=""
+            /></picture>
+          </a>
+        </div>
+      </div>
+      <div id="grid-item2">
+        <!-- <picture
+          ><img id="about-main-img" src="images/pfpmain.jpg" alt=""
+        /></picture> -->
+        <h1 id="skills-title">My Skills</h1>
+        <div id="skills-container">
+          <div class="skills"><h2>HTML</h2></div>
+          <div class="skills"><h2>CSS</h2></div>
+          <div class="skills"><h2>SASS</h2></div>
+          <div class="skills"><h2>Tailwind CSS</h2></div>
+          <div class="skills"><h2>JavaScript</h2></div>
+          <div class="skills"><h2>JQuery</h2></div>
+          <div class="skills"><h2>Node</h2></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="projects-container">
+      <section id="projects-section">
+        <div class="card">
+          <picture class="card-img" id="card-img-one"></picture>
+          <h1 class="card-title">Tip Calculator</h1>
+          <p>
+            A simple yet elegant web application designed to calculate tips quickly. 
+            It allows users to input the total bill amount, select a tip percentage, 
+            and divide the total by the number of people sharing the bill. 
+          </p>
+          <button class="view-btn">View Project</button>
+        </div>
+
+        <div class="card">
+          <picture class="card-img" id="card-img-two"></picture>
+          <h1 class="card-title">Product Card</h1>
+          <p>
+            This project features an interactive card for showcasing products in an online store. 
+            It includes hover effects to reveal product details, price, and an "Add to Cart" 
+            button.
+          </p>
+          <button class="view-btn">View Project</button>
+        </div>
+
+        <div class="card">
+          <picture class="card-img" id="card-img-three"></picture>
+          <h1 class="card-title">Newsletter Sign Up</h1>
+          <p>
+            A responsive sign-up form designed for online newsletters. 
+            It features form validation to ensure user input is correct before submission. 
+            This project highlights my proficiency in form handling and validation 
+            techniques, as well as my attention to detail in creating a seamless user experience.
+          </p>
+          <button class="view-btn">View Project</button>
+        </div>
+
+        <div class="card">
+          <picture class="card-img" id="card-img-four"></picture>
+          <h1 class="card-title">Pricing Component</h1>
+          <p>
+            An interactive pricing component that adjusts the price based on the selected 
+            subscription period. It showcases my ability to create dynamic web elements 
+            that respond to user input, employing JavaScript logic and CSS for a smooth, 
+            engaging user interaction.
+          </p>
+          <button class="view-btn">View Project</button>
+        </div>
+
+        <div class="card">
+          <picture class="card-img" id="card-img-five"></picture>
+          <h1 class="card-title">FAQ Accordion</h1>
+          <p>
+            This project is a FAQ section with an accordion-style layout, where users 
+            can click on a question to reveal the answer. It demonstrates my skills in 
+            creating informative yet compact designs, utilizing JavaScript to dynamically 
+            show and hide content and CSS for smooth transitions.
+          </p>
+          <button class="view-btn">View Project</button>
+        </div>
+
+        <div class="card">
+          <picture class="card-img" id="card-img-six"></picture>
+          <h1 class="card-title">Social Media Dashboard</h1>
+          <p>
+            A dashboard design that displays social media metrics at a glance. It includes charts, 
+            follower counts, and engagement statistics. This project highlights my ability to work 
+            with data visualization libraries and create informative, visually appealing interfaces 
+            that are both functional and user-friendly.
+          </p>
+          <button class="view-btn">View Project</button>
+        </div>
+      </section>
+    </div>
+
+    <section id="contact-section">
+      <form action="sendmail.php" method="post" id="contact-container">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Enter your First Name"
+        />
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Enter your Last Name"
+        />
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your E-mail"
+        />
+        <label for="message">Message</label>
+        <textarea
+          name="subject"
+          id="subject"
+          cols="30"
+          rows="10"
+          placeholder="Enter your Message..."
+        ></textarea>
+        <input type="submit" value="Send" />
+      </form>
+    </section>
+
+    <footer>
+      <h5>Copyright 2024 &#169;YassinDoesDev. Done By Yassin</h5>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
