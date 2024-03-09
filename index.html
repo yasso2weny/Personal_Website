@@ -10,13 +10,12 @@
   </head>
 
   <body>
-    <!-- Header -->
-    <header id="header">
+    <div id="header">
       <!-- Navigation Bar -->
       <nav id="navigation-bar">
         <a id="logo" href="index.html">yassinDoesDev</a>
         <a class="nav-btns" href="#about-section">About</a>
-        <a class="nav-btns" href="#projects-section">Projects</a>
+        <a class="nav-btns" href="#project-section">Projects</a>
         <a class="nav-btns" href="#contact-section">Contact</a>
         <img
           id="burger-img"
@@ -26,7 +25,7 @@
       </nav>
       <!-- Header Title -->
       <h1 id="header-title"><span>Who</span> am I?</h1>
-    </header>
+    </div>
     <!-- open nav bar on mobile -->
     <div class="mbl-container hide-links">
       <div id="cls-img-wrapper">
@@ -34,7 +33,7 @@
       </div>
       <div id="mbl-links">
         <a class="mbl-btns" href="#about-section">About</a>
-        <a class="mbl-btns" href="#projects-section">Projects</a>
+        <a class="mbl-btns" href="#project-section">Projects</a>
         <a class="mbl-btns" href="#contact-section">Contact</a>
       </div>
     </div>
@@ -138,116 +137,38 @@
       </div>
     </section>
 
-    <div id="projects-container">
-      <section id="projects-section">
-        <div class="card">
-          <picture class="card-img" id="card-img-one"></picture>
-          <h1 class="card-title">Tip Calculator</h1>
-          <p>
-            A simple yet elegant web application designed to calculate tips
-            quickly. It allows users to input the total bill amount, select a
-            tip percentage, and divide the total by the number of people sharing
-            the bill.
-          </p>
-          <a href="https://yasso2weny.github.io/tip-calculator-app-main/"
-            ><button class="view-btn">View Project</button></a
-          >
+    <section id="project-section">
+      <h2 class="prev-btn">&lt;</h2>
+      <div id="prj-container">
+        <h1 id="prjtitle">Tip Calculator</h1>
+        <picture><img id="prjimg" src="images/project1.jpg" alt="" /></picture>
+        <p id="info">
+          A simple yet elegant web application designed to calculate tips
+          quickly. It allows users to input the total bill amount, select a tip
+          percentage, and divide the total by the number of people sharing the
+          bill.
+        </p>
+        <div class="slider-wrapper">
+          <h2 class="prev-btn-mbl">&lt;</h2>
+          <button class="view-btn">View Project</button>
+          <h2 class="next-btn-mbl">></h2>
         </div>
-
-        <div class="card">
-          <picture class="card-img" id="card-img-two"></picture>
-          <h1 class="card-title">Product Card</h1>
-          <p>
-            This project features an interactive card for showcasing products in
-            an online store. It includes hover effects to reveal product
-            details, price, and an "Add to Cart" button.
-          </p>
-          <a href="https://yasso2weny.github.io/Product-Preview-Card/"
-            ><button class="view-btn">View Project</button></a
-          >
-        </div>
-
-        <div class="card">
-          <picture class="card-img" id="card-img-three"></picture>
-          <h1 class="card-title">Newsletter Sign Up</h1>
-          <p>
-            A responsive sign-up form designed for online newsletters. It
-            features form validation to ensure user input is correct before
-            submission. This project highlights my proficiency in form handling
-            and validation techniques, as well as my attention to detail in
-            creating a seamless user experience.
-          </p>
-          <a
-            href="https://yasso2weny.github.io/newsletter-sign-up-with-success-message-main/"
-            ><button class="view-btn">View Project</button></a
-          >
-        </div>
-
-        <div class="card">
-          <picture class="card-img" id="card-img-four"></picture>
-          <h1 class="card-title">Pricing Component</h1>
-          <p>
-            An interactive pricing component that adjusts the price based on the
-            selected subscription period. It showcases my ability to create
-            dynamic web elements that respond to user input, employing
-            JavaScript logic and CSS for a smooth, engaging user interaction.
-          </p>
-          <a
-            href="https://yasso2weny.github.io/pricing-component-with-toggle-master/"
-            ><button class="view-btn">View Project</button></a
-          >
-        </div>
-
-        <div class="card">
-          <picture class="card-img" id="card-img-five"></picture>
-          <h1 class="card-title">FAQ Accordion</h1>
-          <p>
-            This project is a FAQ section with an accordion-style layout, where
-            users can click on a question to reveal the answer. It demonstrates
-            my skills in creating informative yet compact designs, utilizing
-            JavaScript to dynamically show and hide content and CSS for smooth
-            transitions.
-          </p>
-          <a href="https://yasso2weny.github.io/faq-accordion-main/"
-            ><button class="view-btn">View Project</button></a
-          >
-        </div>
-
-        <div class="card">
-          <picture class="card-img" id="card-img-six"></picture>
-          <h1 class="card-title">Social Media Dashboard</h1>
-          <p>
-            A dashboard design that displays social media metrics at a glance.
-            It includes charts, follower counts, and engagement statistics. This
-            project highlights my ability to work with data visualization
-            libraries and create informative, visually appealing interfaces that
-            are both functional and user-friendly.
-          </p>
-          <a
-            href="https://yasso2weny.github.io/social-media-dashboard-with-theme-switcher-master/"
-            ><button class="view-btn">View Project</button></a
-          >
-        </div>
-      </section>
-    </div>
+      </div>
+      <h2 class="next-btn">></h2>
+    </section>
 
     <section id="contact-section">
+      <h1 id="contact-section-title">
+        Let's Chat<span class="csSpan">.</span>
+      </h1>
+      <p id="contact-section-paragraph">
+        Are you ready to make something memorable? I am ready to help.
+      </p>
       <form action="sendmail.php" method="post" id="contact-container">
-        <label for="fname">First Name</label>
-        <input
-          type="text"
-          id="fname"
-          name="firstname"
-          placeholder="Enter your First Name"
-        />
-        <label for="lname">Last Name</label>
-        <input
-          type="text"
-          id="lname"
-          name="lastname"
-          placeholder="Enter your Last Name"
-        />
-        <label for="email">Email Address</label>
+        <div id="error-msg-container">
+          <label for="email">Email Address</label>
+          <p id="error-msg">Please enter a valid email</p>
+        </div>
         <input
           type="email"
           id="email"
@@ -260,6 +181,7 @@
           id="subject"
           cols="30"
           rows="10"
+          maxlength="306"
           placeholder="Enter your Message..."
         ></textarea>
         <input type="submit" value="Send" />
