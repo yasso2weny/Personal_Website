@@ -357,16 +357,11 @@ About
 }
 
 /* --------Projects Section-------- */
-
-#projects-container {
+#project-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding-block: 80px;
-  border-left: 5px solid var(--secondary-clr);
-  border-right: 5px solid var(--secondary-clr);
-  border-bottom: 5px solid var(--secondary-clr);
+  justify-content: space-evenly; /* subject to change (center) */
+  align-items: center; /* subject to change (remove) */
+  min-height: 100vh;
 
   background-image: url(images/bg-img-test.svg);
   background-repeat: no-repeat;
@@ -374,88 +369,68 @@ About
   background-size: cover;
 }
 
-#projects-container-title {
-  color: black;
-  font-size: 40px;
-}
-
-#projects-section {
-  width: 90%; /* Width of card container */
-  display: flex; /* Set inline elements */
-  overflow-x: auto; /* Set overflow in horizontal scroll */
-  overflow-y: hidden; /* Hidden overflow in vertical scroll */
-  scroll-snap-type: x mandatory; /* Force the scroll to snap to the start of a scroll-snap area */
-  gap: 8px; /* Set gap between cards */
-  border-radius: 10px;
-  cursor: grab;
-}
-
-#projects-section::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome, Safari and Opera */
-}
-
-#projects-section.active {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-}
-
-.card {
-  min-width: 400px; /* Set min width of card */
-  scroll-snap-align: start; /* Set the element focus position in scroll container */
-
+#prj-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  align-items: center;
   gap: 20px;
-  border: 2px solid var(--secondary-clr);
+  padding: 30px;
+  width: 800px;
+  border-radius: 20px;
   background-color: var(--primary-clr);
-  padding: 20px;
-  border-radius: 10px;
-
-  transition: box-shadow 0.4s ease;
+  border: 2px solid var(--fourth-clr);
+  transition: box-shadow 0.1s ease;
 }
 
-.card:hover {
+#prj-container:hover {
   box-shadow: 0 0 2px 0 var(--secondary-clr);
 }
 
-.card-img {
-  height: 200px;
-  width: 100%;
-  border-radius: 10px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#card-img-one {
-  background-image: url(images/project1.jpg);
-}
-
-#card-img-two {
-  background-image: url(images/project2.jpg);
-}
-
-#card-img-three {
-  background-image: url(images/project3.jpg);
-}
-
-#card-img-four {
-  background-image: url(images/project4.jpg);
-}
-
-#card-img-five {
-  background-image: url(images/project5.jpg);
-}
-
-#card-img-six {
-  background-image: url(images/project6.jpg);
-}
-
-.card-title {
-  color: var(--fourth-clr);
+#prj-container > h1 {
+  color: var(--secondary-clr);
   text-transform: uppercase;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#prjimg {
+  border-radius: 20px;
+}
+
+#prj-container > p {
+  text-align: center;
+  color: var(--secondary-clr);
+}
+
+.prev-btn,
+.next-btn {
+  cursor: pointer;
+  font-size: 70px;
+  color: var(--secondary-clr);
+  transition: 0.4s color ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--fourth-clr);
+}
+
+.prev-btn-mbl,
+.next-btn-mbl {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: var(--secondary-clr);
+  transition: 0.4s color ease;
+}
+
+.prev-btn-mbl:hover,
+.next-btn-mbl:hover {
+  color: var(--fourth-clr);
 }
 
 .view-btn {
@@ -478,14 +453,27 @@ About
 
 /* --------Contact Section-------- */
 
+#contact-section-title {
+  font-size: 60px;
+}
+
+.csSpan {
+  color: var(--fourth-clr);
+}
+
+#contact-section-paragraph {
+  font-size: 20px;
+  text-align: center;
+}
+
 #contact-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   gap: 32px;
-
   background-image: url(images/bg-img-test.svg);
   background-repeat: no-repeat;
   background-position: left;
@@ -500,8 +488,19 @@ About
   background-color: var(--primary-clr);
   padding: 20px;
   border-radius: 10px;
-  width: 500px;
+  width: 650px;
   box-shadow: 0 0 2px 0 var(--secondary-clr);
+}
+
+#error-msg-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#error-msg {
+  display: none;
+  color: rgb(255, 60, 60);
+  font-weight: bold;
 }
 
 label {
@@ -509,7 +508,15 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
+input[type="email"] {
+  height: 50px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
 input[type="email"],
 textarea {
   background-color: transparent;
@@ -520,7 +527,6 @@ textarea {
 
 input::placeholder {
   color: black;
-  font-weight: normal;
   opacity: 0.4;
 }
 
@@ -733,5 +739,20 @@ footer {
   .section-center {
     width: 90vw;
     max-width: 1170px;
+  }
+
+  /* --------Contact Section-------- */
+  #contact-container {
+    width: 375px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    display: none;
+  }
+
+  .prev-btn-mbl,
+  .next-btn-mbl {
+    display: block;
   }
 }
