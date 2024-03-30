@@ -165,7 +165,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 3.125rem;
+  margin-top: 8.125rem;
   font-size: 9.375rem;
   color: var(--secondary-clr);
 }
